@@ -12,11 +12,11 @@
 ```
 <br>
 第二步(2 step)<br>
-    //2.添加实体对象到数据库(add your object into database)
+    //2.添加实体对象到数据库(add your object into database)<br>
         DataBaseUtil.getInstance(this).insert(userBean);
 <br>
 第三步(3 step)<br>
-    //3.获取对应实体类到数据库数据(get datas from database)
+    //3.获取对应实体类到数据库数据(get datas from database)<br>
         ArrayList list = DataBaseUtil.getInstance(this).getList(UserBean.class);
 <br>
 上面需要try...catch异常（add try...catch some Exceptions）
