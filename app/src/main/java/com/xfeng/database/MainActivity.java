@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         userBean.setName("Name-" + ('a' + rand.nextInt(26 * 2 -1)));
         userBean.setAge(1 + rand.nextInt(200));
         userBean.setCity("city");
+        userBean.setSex(rand.nextBoolean());
         //2.添加实体对象到数据库(add your object into database)
         DataBaseUtil.getInstance(this).insert(userBean);
     }

@@ -103,6 +103,8 @@ public class DataBaseUtil {
                     field.set(object, cursor.getLong(index));
                 }else if(typeStr.equals("String")){
                     field.set(object, cursor.getString(index));
+                }else if(typeStr.equals("boolean")){
+                    field.set(object, cursor.getInt(index) == 1 ? true : false);
                 }
             }
             list.add(object);
@@ -129,11 +131,13 @@ public class DataBaseUtil {
             String typeStr = field.getType().getSimpleName();
             field.setAccessible(true);
             if(typeStr.equals("int")){
-                values.put(field.getName(), (int)field.getInt(obj));
+                values.put(field.getName(), field.getInt(obj));
             }else if(typeStr.equals("long")){
-                values.put(field.getName(), (long)field.getLong(obj));
+                values.put(field.getName(), field.getLong(obj));
             }else if(typeStr.equals("String")){
                 values.put(field.getName(), (String)field.get(obj));
+            }else if(typeStr.equals("boolean")){
+                values.put(field.getName(), field.getBoolean(obj) ? 1 : 0);
             }
         }
         return values;

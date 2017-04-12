@@ -51,7 +51,8 @@ public class ClassUtil {
             String typeStr = field.getType().getSimpleName();
             if (typeStr.equals("int")
                     || typeStr.equals("long")
-                    || typeStr.equals("String")) {
+                    || typeStr.equals("String")
+                    || typeStr.equals("boolean")) {
                 list.add(field.getName());
             }
         }
@@ -101,7 +102,7 @@ public class ClassUtil {
             } else if (typeStr.equals("String")) {
                 typeStr = "text";
             }else if(typeStr.equals("boolean")){
-                continue;
+                typeStr = "integer";
             }
             map.put(field.getName(), typeStr);
         }

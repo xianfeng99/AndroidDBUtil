@@ -9,6 +9,7 @@ public class UserBean {
     private int age;
     private String name;
     private String city;
+    private boolean sex;
 
     public int getAge() {
         return age;
@@ -32,5 +33,13 @@ public class UserBean {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public boolean isSex() {
+        return sex;
+    }
+
+    public void setSex(boolean sex) {
+        this.sex = sex;
     }
 }

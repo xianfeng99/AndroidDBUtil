@@ -37,6 +37,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.Holder> {
         holder.item_user_name.setText(user.getName());
         holder.item_user_age.setText(String.valueOf(user.getAge()));
         holder.item_user_city.setText(user.getCity());
+
+        if(user.isSex()){
+            holder.item_user_sex.setText("male");
+        }else{
+
+            holder.item_user_sex.setText("female");
+        }
     }
 
     @Override
@@ -58,6 +65,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.Holder> {
         TextView item_user_name;
         TextView item_user_age;
         TextView item_user_city;
+        TextView item_user_sex;
 
         public Holder(View itemView) {
             super(itemView);
@@ -65,6 +73,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.Holder> {
             item_user_name = (TextView) itemView.findViewById(R.id.item_user_name);
             item_user_age = (TextView) itemView.findViewById(R.id.item_user_age);
             item_user_city = (TextView) itemView.findViewById(R.id.item_user_city);
+            item_user_sex = (TextView) itemView.findViewById(R.id.item_user_sex);
         }
     }
 

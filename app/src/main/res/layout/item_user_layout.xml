@@ -18,4 +18,9 @@
         style="@style/userStyle"
         android:text="city"/>
 
+    <TextView
+        android:id="@+id/item_user_sex"
+        style="@style/userStyle"
+        android:text="male"/>
+
 </LinearLayout>
