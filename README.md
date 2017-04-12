@@ -22,4 +22,5 @@
             //3.获取对应实体类到数据库数据(get datas from database)
             ArrayList list = DataBaseUtil.getInstance(this).getList(UserBean.class);
 ```
+<br>
 上面需要try...catch异常（add try...catch some Exceptions）
